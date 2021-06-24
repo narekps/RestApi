@@ -19,4 +19,6 @@ func (api *Api) configureLogger() error {
 
 func (api *Api) configureRouter() {
 	api.router.HandleFunc("/ping", api.pingHandler).Methods(http.MethodGet)
+	api.router.HandleFunc("/grab", api.grabHandler).Methods(http.MethodPost)
+	api.router.HandleFunc("/solve", api.solveHandler).Methods(http.MethodGet)
 }

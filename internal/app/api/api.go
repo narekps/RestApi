@@ -1,6 +1,7 @@
 package api
 
 import (
+	"github.com/narekps/RestApi/internal/app/models"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -11,6 +12,7 @@ type Api struct {
 	config *Config
 	logger *logrus.Logger
 	router *mux.Router
+	data   *models.Data
 }
 
 func New(config *Config) *Api {
